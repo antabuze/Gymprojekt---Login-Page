@@ -6,6 +6,6 @@ En del i ett större grupparbete som syftade till att integrera flera delar av e
 
 I slutet av projektet jobbade vi tillsammans med övriga grupper för att integrera ihop alla delar till ett fungerande system, som tyvärr inte finns publicerat längre.
 
-Detta är den web-applikation där admins kan logga in och administrera systemet. Applikationen är gjord med Model-View-Controller (MVC) som designmönster. 
+Detta är den web-applikation där admins kan logga in och administrera systemet. Applikationen är gjord med Model-View-Controller (MVC) som designmönster, skrivet i C# med ASP.NET. 
 
 Länk till API-delen: https://github.com/antabuze/Gymprojekt---Login-API
