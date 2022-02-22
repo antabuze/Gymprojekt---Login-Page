@@ -1,0 +1,44 @@
+﻿@model SysAdminLogin.Models.Admin
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h1>Verify</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 table table-dark">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Email</label><br />
+                @Html.EditorFor(model => model.Email)
+                <span asp-validation-for="Email" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Lösenord</label><br />
+                @Html.EditorFor(model => model.Password)
+                <span asp-validation-for="Password" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Roll</label><br />
+                @Html.EditorFor(model => model.RoleId)
+                <span asp-validation-for="RoleId" class="alert-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Verifiera" class="btn btn-light" />
+                <a asp-action="Index" class="btn btn-light">Tillbaka</a>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

@@ -1,0 +1,33 @@
+﻿@model SysAdminLogin.Models.Admin
+@{
+    ViewData["Title"] = "Login";
+}
+
+<body class="bodyLogin">
+    <form class="loginform" asp-action="Index" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="imgcontainer">
+            <img src="~/loggavitOrange.png" alt="Avatar" class="avatar"/>
+        </div>
+
+        <div class="container">
+            <label for="Email"><b>Användarnamn</b></label>
+            <input class="inputType" asp-for="Email" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <br />
+            <label for="Password"><b>Lösenord</b></label>
+            <input class="inputType" type="password" asp-for="Password" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <p class="text-danger"> @ViewBag.ErrorMessage</p>
+            <button class="ButtonLogin" type="submit">Logga in</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+            </label>
+        </div>
+
+        <div class="container">
+            <button type="button" class="cancelbtn">Avbryt</button>
+            <span class="psw">Glömt <a href="#">lösenord?</a></span>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,365 @@
+﻿body {
+    font-family: Raleway, sans-serif;
+}
+/*
+body:before {
+   background-color: white;
+   content:"";
+   width: 100%;
+   height: 200%;
+   position:absolute;
+   top: 0;
+   left: 0;
+   background-size: 100%;
+   background-attachment: fixed;
+   z-index: -2;
+   
+} */
+
+/*Lista/Tabellen*/
+.table {
+    width: 100%; /*OBS: om mycket text välj 100%, Se guide*/
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.icon {
+    max-height: 30px;
+    max-width: 30px;
+    width: auto;
+    height: auto;
+}
+
+.table thead th {
+    border-bottom: 1px solid lightgrey;
+    border-top: none;
+    font-weight: bolder;
+}
+
+.table td {
+    border-bottom: 1px solid lightgrey;
+}
+
+.Createlink {
+    color: #F17537;
+}
+
+    .Createlink:hover {
+        text-decoration: none;
+        color: #F17537;
+        font-weight: bold;
+    }
+
+h1 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+/*Lista/Tabellen SLUT*/
+
+
+/*Referens navbar: https://www.youtube.com/watch?v=SdhmvnwOM2E */
+/**MENY**/
+.navbaren {
+    width: 100%;
+    overflow: hidden;
+    height: 73px;
+    line-height: 70px;
+    background: #37365C;
+}
+
+.containerNav {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logga {
+    display: inline-flex;
+    padding: 10px 1px;
+    font-size: 1.1em;
+    line-height: 1;
+    float: left;
+}
+
+img {
+    max-height: 70px;
+}
+
+.meny {
+    float: right;
+}
+
+    .meny li {
+        float: left;
+        width: 120px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        list-style: none;
+    }
+
+        .meny li a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .meny li:hover {
+            font-weight: bold;
+        }
+
+        .meny li a:hover {
+            color: white;
+        }
+/**MENY SLUT**/
+
+/*Knapp i CRUD, kopierad från site, behövs tas bort i site*/
+.btn-primary {
+    color: #fff;
+    background-color: #F17537;
+    border-color: #F17537;
+}
+
+    .btn-primary:hover {
+        background-color: #F17537;
+        font-weight: bold;
+        border-color: #F17537;
+    }
+
+/*Länkarna ta bort från site*/
+a {
+    color: #F17537;
+}
+
+    a:hover {
+        color: #F17537;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+.bodyLogin {
+    position: center;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    /*Logga in*/
+
+    .bodyLogin:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+
+*
+
+.bodyLogin:before {
+    content: "";
+    width: 100%;
+    height: 200%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1b2030 url(../bildLogin.png) 50% 0 no-repeat;
+    background-size: 100%;
+    background-attachment: scroll;
+    z-index: -2;
+    -webkit-filter: blur(4px);
+    -moz-filter: blut(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 8px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 43%;
+    max-height: 200px;
+}
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+    color: black;
+}
+
+span a {
+    color: black;
+}
+
+    span a:hover {
+        color: black;
+    }
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+        color: black;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+/*Style knappar logga in*/
+Button {
+    background-color: transparent;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin: 3px 2px;
+    border: 2px solid white;
+    color: white;
+}
+
+    Button:hover {
+        background-color: #F17537;
+        border-color: black;
+        color: white;
+    }
+
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #37365C;
+    border: hidden;
+}
+
+    .cancelbtn:hover {
+        opacity: 0.7;
+        background-color: #37365C;
+    }
+
+.loginform {
+    /*border: 0.1px solid #f1f1f1;*/
+    border-radius: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 5%; /*Avståndet mellan navbaren och forumet*/
+    margin-bottom: 5%; /*OBS osäker om det fungerar */
+    color: white;
+    font-family: Raleway, sans-serif;
+    background: rgba(200,200,200,0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+/* Set a style for all buttons */
+.ButtonLogin {
+    background-color: #F17537;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container {
+}
+/*Från site för ta bort linje ovanför footer*/
+.border-top {
+    border-top: none;
+}
+
+.border-bottom {
+    border-bottom: none;
+}
+
+/*Footer tas bort från site*/
+
+.footer {
+    background-color: #37365C;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.form-control[type=text], .form-control[type=password] {
+    background-color: white;
+    border: 1px solid #F17537;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .05rem rgba(241, 117, 55, 1);
+    border-color: #F17537;
+}
+
+.col-md-4 {
+    margin-left: auto;
+    background: rgba(200,200,200,0.3);
+    margin-right: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 50px 50px 50px 50px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.bild {
+    position: center;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    /*Logga in*/
+
+    .bild:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+
+*
+
+.bild:before {
+    content: "";
+    width: 100%;
+    height: 200%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1b2030 url(../kettlebell.png) 50% 0 no-repeat;
+    background-size: 100%;
+    background-attachment: scroll;
+    z-index: -2;
+    -webkit-filter: blur(4px);
+    -moz-filter: blut(4px);
+}

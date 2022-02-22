@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SysAdminLogin.Models.Admin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Users</h1>
+<p>
+    <a asp-action="Create">Lägg till</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                Lösenord
+            </th>
+            <th>
+                Roll
+            </th>
+            <th>Åtgärder</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleId)
+                </td>
+                <td>
+                    <a href="@Url.Action("Create", "Admin", new { id = item.Id})">
+                        <img class="icon" src="https://img.icons8.com/color/48/000000/edit--v1.png" />
+                    </a>
+                    <a href="@Url.Action("Delete", "Admin", new { id = item.Id})">
+                        <img class="icon" src="https://img.icons8.com/color/48/000000/delete-sign--v1.png" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<input type="button" value="Tillbaka till meny" onclick="window.location='@Url.Action("Index", "Home")'" class="Createlink" />

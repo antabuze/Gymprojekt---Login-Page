@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center align-content-md-center">
+    <div class="container">
+        <h1 class="display-4 text-light">Sysadmin Page</h1>
+        <input type="button" value="Användare" onclick="window.location='@Url.Action("Index", "Admin")'" class="ButtonLogin" />
+        <input type="button" value="Stämplingar" onclick="window.location='@Url.Action("Index", "UserCheckin")'" class="ButtonLogin" />
+        <input type="button" value="Intervall" onclick="window.location='@Url.Action("UserCheckinsInterval", "UserCheckin")'" class="ButtonLogin" />
+        <input type="button" value="Logga ut" onclick="window.location='@Url.Action("SignOut", "LogIn")'" class="ButtonLogin" />
+        @*<input type="button" value="GetInterval" onclick="window.location='@Url.Action("UserCheckinsInterval", "UserCheckin")'" class="btn btn-light btn-lg btn-block" />*@
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SysAdminLogin.Models.UserCheckin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Intervall</h1>
+
+<h2>
+    Anställd ID:  @Html.DisplayFor(model => model.FirstOrDefault().EmployeeId)
+</h2 >
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Starttid
+            </th>
+            <th>
+                Sluttid
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<input type="button" value="Tillbaka till meny" onclick="window.location='@Url.Action("Index", "Home")'" class="btn btn-light btn-lg btn-block" />

@@ -1,0 +1,44 @@
+﻿@model SysAdminLogin.Models.UserCheckin
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h1>Lägg till stämpling</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 table table-dark">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Användare</label><br />
+                @Html.EditorFor(model => model.EmployeeId)
+                <span asp-validation-for="EmployeeId" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Instämplingstid</label><br />
+                @Html.EditorFor(model => model.StartTime)
+                <span asp-validation-for="StartTime" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Utstämplingstid</label><br />
+                @Html.EditorFor(model => model.EndTime)
+                <span asp-validation-for="EndTime" class="alert-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lägg till" class="btn btn-light" />
+                <a asp-action="Index" class="btn btn-light">Tillbaka</a>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

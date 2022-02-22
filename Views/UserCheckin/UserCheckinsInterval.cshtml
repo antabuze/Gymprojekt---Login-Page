@@ -1,0 +1,46 @@
+﻿@model SysAdminLogin.Models.UserCheckin
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h1>Sök arbetstid inom intervall för specifik anställd</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 table">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Anställd ID</label>
+                <br />
+                @Html.EditorFor(model => model.EmployeeId)
+                <span asp-validation-for="EmployeeId" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Starttid</label>
+                <br />
+                @Html.EditorFor(model => model.StartTime)
+                <span asp-validation-for="StartTime" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Sluttid</label>
+                <br />
+                @Html.EditorFor(model => model.EndTime)
+                <span asp-validation-for="EndTime" class="alert-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Sök" class="Createlink" />
+                <a asp-action="Index" class="Createlink">Tillbaka</a>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}
